@@ -1,3 +1,4 @@
+
 body {
   background-color: rgb(19, 21, 24);
   align-items: center;
@@ -20,13 +21,40 @@ body {
 .left-cont{
     width:50%;
     height:90%;
+    display: flex;
+    align-items: center;
 }
 .title{
     color:rgb(252,196,144);
+    font-size: 3.6em;
+    
+    text-shadow: 1px 1px 10px rgba(252, 196, 144, 0.568);
+    font-family: 'Kaushan Script', cursive;
 }
 .right-cont{
     width: 50%;
     height:90%;
     background-color: #000;
     border:none;
+}
+.wish{
+    color:rgb(252,196,144);
+    font-size: 2.0em;
+    text-shadow: 1px 1px 10px rgba(252, 196, 144, 0.568);
+    font-family: 'Kaushan Script', cursive;
+    transform:translate(2px,-40px) ;
+}
+.content{
+    margin:10px 0 0 20px;
+}
+.get-btn{
+    background: linear-gradient(-90deg, rgba(252, 195, 142, 0.363), rgba(250, 204, 161, 0.9));
+    color:rgb(0, 0, 0);
+    border:0px;
+    width:150px;
+    height:30px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    transform:translate(2px,-40px);
+    box-shadow: 1px 1px 4px 1px rgba(252, 196, 144, 0.35);
 }
