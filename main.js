@@ -1,7 +1,26 @@
 let scene, camera, renderer, controls, model, hemiLight, spotLight;
+
+window.onload=function(){
+  var musicGlyph = document.querySelector(".glyph");
+    musicGlyph.addEventListener("click", () => {
+      if (musicGlyph.classList.contains("glyph-switch")) {
+        musicGlyph.src = "glyphs/sound-no.svg";
+        document.querySelector("audio").pause();
+      }
+      else{
+        musicGlyph.src="glyphs/sound.svg";
+        document.querySelector("audio").play();
+      }
+      musicGlyph.classList.toggle("glyph-switch");
+    });
+  };
+
+
 function init() {
+  //music
   
 
+  //music done
   scene = new THREE.Scene();
   container = document.querySelector(".right-cont");
   var w = container.offsetWidth;
@@ -35,12 +54,9 @@ function init() {
   renderer.shadowMap.enabled = true;
 
   //add button listeners
-  renderer.domElement.addEventListener("click", function(){
-      cancelAnim();
+  renderer.domElement.addEventListener("click", function () {
+    cancelAnim();
   });
-
-
-
 
   new THREE.GLTFLoader().load(`model/scene.gltf`, (result) => {
     model = result.scene.children[0];
@@ -57,7 +73,7 @@ function animate() {
   renderer.render(scene, camera);
   model.rotation.z = Math.sin(time);
   time = time + 0.03;
-  
+
   spotLight.position.set(
     camera.position.x + 10,
     camera.position.y + 10,
@@ -67,3 +83,5 @@ function animate() {
   requestAnimationFrame(animate);
 }
 init();
+
+//music
