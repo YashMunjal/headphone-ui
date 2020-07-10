@@ -1,4 +1,6 @@
-
+*{
+    outline:none;
+}
 body {
   background-color: rgb(19, 21, 24);
   align-items: center;
